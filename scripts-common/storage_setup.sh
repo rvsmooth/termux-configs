@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-[ ! -d $HOME/storage/download ] &&
+[ ! -d $HOME/storage/downloads ] &&
   echo "Storage permission is not setup" &&
   yes | termux-setup-storage &&
   sleep 10 &&
