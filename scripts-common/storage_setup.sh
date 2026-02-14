@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-[ ! -d ~/storage/download ] &&
+[ ! -d $HOME/storage/download ] &&
   echo "Storage permission is not setup" &&
   yes | termux-setup-storage &&
   sleep 10 &&
-  mkdir ~/storage/downloads/termux-ytdl
+  mkdir $HOME/storage/downloads/termux-ytdl
