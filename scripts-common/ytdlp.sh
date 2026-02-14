@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ##############
 # Aliases to use common advanced YT-DLP commands
 ##############
@@ -15,21 +16,23 @@
 # Basic Archive command.
 # Writes files: description, thumbnail, URL link, and subtitles into a named folder:
 # Output Example: ./Title - Creator (Year)/Title-Year.ext
-DESTINATION="~/storage/download/termux-ytdl"
+DESTINATION="~/storage/downloads/termux-ytdl"
 
-alias yt-dlp-archive='cd $DESTINATION && yt-dlp \
---embed-thumbnail \
---embed-metadata \
---embed-chapters \
---write-thumbnail \
---write-description \
---write-url-link \
---write-subs \
---write-auto-subs \
---sub-format srt \
---trim-filenames 248 \
---sponsorblock-mark all \
---output "%(title)s - %(channel,uploader)s (%(release_year,upload_date>%Y)s)/%(title)s - %(release_year,upload_date>%Y)s - [%(id)s].%(ext)s"'
+yt-dlp-archive() {
+  cd $DESTINATION && yt-dlp \
+    --embed-thumbnail \
+    --embed-metadata \
+    --embed-chapters \
+    --write-thumbnail \
+    --write-description \
+    --write-url-link \
+    --write-subs \
+    --write-auto-subs \
+    --sub-format srt \
+    --trim-filenames 248 \
+    --sponsorblock-mark all \
+    --output "%(title)s - %(channel,uploader)s (%(release_year,upload_date>%Y)s)/%(title)s - %(release_year,upload_date>%Y)s - [%(id)s].%(ext)s"
+}
 
 # Archiver in Playlist mode.
 # Writes files: description, thumbnail, URL link, subtitles, auto-subtitles
