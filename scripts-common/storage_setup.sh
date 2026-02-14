@@ -2,5 +2,6 @@
 
 [ ! -d ~/storage/download ] &&
   echo "Storage permission is not setup" &&
-  termux-setup-storage &&
+  yes | termux-setup-storage &&
+  sleep 10 &&
   mkdir ~/storage/downloads/termux-ytdl
