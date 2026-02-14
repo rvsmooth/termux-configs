@@ -16,7 +16,7 @@
 # Basic Archive command.
 # Writes files: description, thumbnail, URL link, and subtitles into a named folder:
 # Output Example: ./Title - Creator (Year)/Title-Year.ext
-DESTINATION="~/storage/downloads/termux-ytdl"
+set DESTINATION "~/storage/downloads/termux-ytdl"
 
 yt-dlp-archive() {
   cd $DESTINATION && yt-dlp \
