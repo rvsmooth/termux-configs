@@ -3,6 +3,9 @@ set -x TERM xterm-256color
 set PATH $PATH ~/.local/bin
 
 source $HOME/.config/scripts-common/aliases.sh
+source $HOME/.config/scripts-common/ytdlp.sh
+source $HOME/.config/scripts-common/storage_setup.sh
+
 fish_config theme choose TokyoNight_Night
 
 #                                 _   
